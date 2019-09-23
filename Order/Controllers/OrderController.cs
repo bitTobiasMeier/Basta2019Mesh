@@ -34,7 +34,9 @@ namespace OrderController.Controllers
             using (var client = new HttpClient())
             {
                 try {
-                    await client.PostAsJsonAsync("http://delivery.basta2019mesh/api/Delivery/", order);
+                    var svcname = "deliveryservicename";
+                    svcname = Environment.GetEnvironmentVariable("DeliveryServiceName");
+                    await client.PostAsJsonAsync("http://" + svcname + "/api/Delivery/", order);
                 }
                 catch (Exception ex)
                 {

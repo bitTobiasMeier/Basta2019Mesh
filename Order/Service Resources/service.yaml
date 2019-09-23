@@ -14,9 +14,9 @@ application:
               endpoints:
                 - name: OrderListener
                   port: 80
-#              environmentVariables:
-#                - name: ApplicationInsights:InstrumentationKey
-#                  value: "<Place AppInsights key here, or reference it via a secret>"
+              environmentVariables:
+                - name: deliveryservicename
+                  value: "[parameters('OrderService_DeliveryServiceName')]"
               resources:
                 requests:
                   cpu: "[parameters('Order_cpu')]"

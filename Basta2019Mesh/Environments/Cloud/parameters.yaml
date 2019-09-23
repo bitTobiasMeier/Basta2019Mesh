@@ -3,3 +3,4 @@ Order_cpu: 1
 Order_ingressport: 80
 Delivery_cpu: 1
 Delivery_ingressport: 81
+OrderService_DeliveryServiceName: delivery.basta2019mesh
