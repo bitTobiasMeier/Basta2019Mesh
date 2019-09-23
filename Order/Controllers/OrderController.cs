@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,8 +15,24 @@ namespace OrderController.Controllers
     {
         // GET: api/<controller>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<string>> Get()
         {
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    var svcname = Environment.GetEnvironmentVariable("DeliveryServiceName");
+                    var response = await client.GetAsync("http://" + svcname + "/api/Delivery/");
+                    response.EnsureSuccessStatusCode();
+                    var jsonString = await response.Content.ReadAsStringAsync();
+                    var obj = JsonConvert.DeserializeObject<string[]>(jsonString);
+                    return obj;
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.Message);
+                }
+            }
             return new string[] { "value1", "value2" };
         }
 
@@ -34,8 +51,7 @@ namespace OrderController.Controllers
             using (var client = new HttpClient())
             {
                 try {
-                    var svcname = "deliveryservicename";
-                    svcname = Environment.GetEnvironmentVariable("DeliveryServiceName");
+                    var svcname = Environment.GetEnvironmentVariable("DeliveryServiceName");
                     await client.PostAsJsonAsync("http://" + svcname + "/api/Delivery/", order);
                 }
                 catch (Exception ex)

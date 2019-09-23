@@ -11,6 +11,12 @@ application:
           codePackages:
             - name: Delivery
               image: delivery:dev
+              volumes:
+              - name: sfvol
+                creationParameters:
+                  kind: ServiceFabricVolumeDisk
+                  sizeDisk: Small
+                destinationPath: c:\app\data
               endpoints:
                 - name: DeliveryListener
                   port: 80
