@@ -1,0 +1,28 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview2
+  name: Basta2019Mesh
+  properties:
+    services:
+      - name: Order
+        properties:
+          description: Order description.
+          osType: Windows
+          codePackages:
+            - name: Order
+              image: order:dev
+              endpoints:
+                - name: OrderListener
+                  port: 80
+#              environmentVariables:
+#                - name: ApplicationInsights:InstrumentationKey
+#                  value: "<Place AppInsights key here, or reference it via a secret>"
+              resources:
+                requests:
+                  cpu: "[parameters('Order_cpu')]"
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: Basta2019MeshNetwork
+              endpointRefs:
+                - name: OrderListener

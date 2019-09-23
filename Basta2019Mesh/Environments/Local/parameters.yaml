@@ -1,0 +1,5 @@
+## Parameters file ##
+Order_cpu: 0.5
+Order_ingressport: 8080
+Delivery_cpu: 0.5
+Delivery_ingressport: 8081

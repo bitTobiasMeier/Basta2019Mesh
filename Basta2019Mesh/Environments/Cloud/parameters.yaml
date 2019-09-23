@@ -1,0 +1,5 @@
+## Parameters file ##
+Order_cpu: 1
+Order_ingressport: 80
+Delivery_cpu: 1
+Delivery_ingressport: 81

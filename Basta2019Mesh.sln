@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9B56FCB0-63B4-404F-8A09-42EF52B53347}") = "Basta2019Mesh", "Basta2019Mesh\Basta2019Mesh.sfaproj", "{C89C02E4-4AC1-44EF-AF9B-9451D6B5028F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order", "Order\Order.csproj", "{D3C0863A-5D53-43EE-945B-E0BE6375B596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery", "Delivery\Delivery.csproj", "{905C638E-AA49-4B29-A901-13516129FE10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C89C02E4-4AC1-44EF-AF9B-9451D6B5028F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C89C02E4-4AC1-44EF-AF9B-9451D6B5028F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C89C02E4-4AC1-44EF-AF9B-9451D6B5028F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C89C02E4-4AC1-44EF-AF9B-9451D6B5028F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C0863A-5D53-43EE-945B-E0BE6375B596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C0863A-5D53-43EE-945B-E0BE6375B596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C0863A-5D53-43EE-945B-E0BE6375B596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C0863A-5D53-43EE-945B-E0BE6375B596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{905C638E-AA49-4B29-A901-13516129FE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905C638E-AA49-4B29-A901-13516129FE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905C638E-AA49-4B29-A901-13516129FE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{905C638E-AA49-4B29-A901-13516129FE10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17E85DDB-CAD1-4212-A5FD-DC82C51CFA3E}
+	EndGlobalSection
+EndGlobal

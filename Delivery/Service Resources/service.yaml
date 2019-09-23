@@ -1,0 +1,28 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview2
+  name: Basta2019Mesh
+  properties:
+    services:
+      - name: Delivery
+        properties:
+          description: Delivery description.
+          osType: Windows
+          codePackages:
+            - name: Delivery
+              image: delivery:dev
+              endpoints:
+                - name: DeliveryListener
+                  port: 80
+#              environmentVariables:
+#                - name: ApplicationInsights:InstrumentationKey
+#                  value: "<Place AppInsights key here, or reference it via a secret>"
+              resources:
+                requests:
+                  cpu: "[parameters('Delivery_cpu')]"
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: Basta2019MeshNetwork
+              endpointRefs:
+                - name: DeliveryListener

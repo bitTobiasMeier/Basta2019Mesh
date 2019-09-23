@@ -1,0 +1,22 @@
+gateway:
+  schemaVersion: 1.0.0-preview2
+  name: Basta2019MeshGateway
+  properties:
+    description: Basta2019Mesh Gateway Resource
+    sourceNetwork:
+      name: Open
+    destinationNetwork:
+      name: Basta2019MeshNetwork
+    tcp:
+      - name: DeliveryTCP
+        port: "[parameters('Delivery_ingressport')]"
+        destination:
+          applicationName: Basta2019Mesh
+          serviceName: Delivery
+          endpointName: DeliveryListener
+      - name: OrderTCP
+        port: "[parameters('Order_ingressport')]"
+        destination:
+          applicationName: Basta2019Mesh
+          serviceName: Order
+          endpointName: OrderListener
