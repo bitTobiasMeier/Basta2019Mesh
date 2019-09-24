@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Der BASTA! Lieferservice</h1>
+
+<form method="post">
+    <table>
+        <tbody>
+            <tr>
+                <th>Gericht:</th>
+                <td>@Html.EditorFor(m => m.Item)</td>
+            </tr>
+            <tr>
+                <th>Anzahl:</th>
+                <td>@Html.EditorFor(m => m.Quantity)</td>
+            </tr>
+            <tr>
+                <th>Preis:</th>
+                <td>@Html.EditorFor(m => m.Price)</td>
+            </tr>
+            <tr>
+                <th colspan="2">@Html.DisplayFor(m=>m.Message)</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Bestellen" class="btn btn-primary" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

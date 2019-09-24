@@ -1,0 +1,28 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview2
+  name: Basta2019Mesh
+  properties:
+    services:
+      - name: App
+        properties:
+          description: App description.
+          osType: Windows
+          codePackages:
+            - name: App
+              image: app:dev
+              endpoints:
+                - name: AppListener
+                  port: 80
+              environmentVariables:
+                - name: orderservicename
+                  value: "[parameters('App_OrderServiceName')]"
+              resources:
+                requests:
+                  cpu: "[parameters('App_cpu')]"
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: Basta2019MeshNetwork
+              endpointRefs:
+                - name: AppListener

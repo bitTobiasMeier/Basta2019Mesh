@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9B56FCB0-63B4-404F-8A09-42EF52B53347}") = "Basta2019Mesh", "Basta2019Mesh\Basta2019Mesh.sfaproj", "{C89C02E4-4AC1-44EF-AF9B-9451D6B5028F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order", "Order\Order.csproj", "{D3C0863A-5D53-43EE-945B-E0BE6375B596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order", "Order\Order.csproj", "{D3C0863A-5D53-43EE-945B-E0BE6375B596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delivery", "Delivery\Delivery.csproj", "{905C638E-AA49-4B29-A901-13516129FE10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delivery", "Delivery\Delivery.csproj", "{905C638E-AA49-4B29-A901-13516129FE10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{8A2C0128-63E5-4078-8A15-150EFE797B03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{905C638E-AA49-4B29-A901-13516129FE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{905C638E-AA49-4B29-A901-13516129FE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{905C638E-AA49-4B29-A901-13516129FE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A2C0128-63E5-4078-8A15-150EFE797B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A2C0128-63E5-4078-8A15-150EFE797B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A2C0128-63E5-4078-8A15-150EFE797B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A2C0128-63E5-4078-8A15-150EFE797B03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

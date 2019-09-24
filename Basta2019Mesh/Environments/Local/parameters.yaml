@@ -4,3 +4,6 @@ Order_ingressport: 8080
 Delivery_cpu: 0.5
 Delivery_ingressport: 8081
 OrderService_DeliveryServiceName: delivery.basta2019mesh
+App_cpu: 0.5
+App_ingressport: 8082
+App_OrderServiceName: order.basta2019mesh

@@ -8,6 +8,12 @@ gateway:
     destinationNetwork:
       name: Basta2019MeshNetwork
     tcp:
+      - name: AppTCP
+        port: "[parameters('App_ingressport')]"
+        destination:
+          applicationName: Basta2019Mesh
+          serviceName: App
+          endpointName: AppListener
       - name: DeliveryTCP
         port: "[parameters('Delivery_ingressport')]"
         destination:

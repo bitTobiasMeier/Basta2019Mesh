@@ -1,0 +1,16 @@
+﻿@page
+@model App.Pages.BestellungenModel
+@{
+    ViewData["Title"] = "Bestellungen";
+}
+
+<h2>Bestellungen</h2>
+
+<table>
+    @foreach (var item in this.Model.Items)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item);</td>
+        </tr>
+    }
+</table>
