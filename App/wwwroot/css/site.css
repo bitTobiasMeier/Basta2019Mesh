@@ -1,7 +1,7 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
 body {
-    padding-top: 50px;
+    padding-top: 190px;
     padding-bottom: 20px;
 }
 
@@ -33,6 +33,15 @@ form table tr td {
     margin: 5px;
 }
 
+#header {
+    background-image: url("../images/foto5.jpg");
+    height: 150px;
+    width: 100%;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0px solid white
+}
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
