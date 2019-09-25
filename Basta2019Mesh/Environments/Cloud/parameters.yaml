@@ -1,9 +1,9 @@
 ## Parameters file ##
 Order_cpu: 1
-Order_ingressport: 80
+Order_ingressport: 82
 Delivery_cpu: 1
 Delivery_ingressport: 81
 OrderService_DeliveryServiceName: delivery.basta2019mesh
 App_cpu: 1
-App_ingressport: 82
+App_ingressport: 80
 App_OrderServiceName: order.basta2019mesh
