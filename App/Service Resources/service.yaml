@@ -22,6 +22,21 @@ application:
                   cpu: "[parameters('App_cpu')]"
                   memoryInGB: 1
           replicaCount: 1
+          autoScalingPolicies:
+            - name: AutoScaleWorkerRule
+              trigger:
+                kind: AverageLoad
+                metric:
+                  kind: Resource
+                  name: cpu
+                lowerLoadThreshold: 0.2
+                upperLoadThreshold: 0.8
+                scaleIntervalInSeconds: 60
+              mechanism:
+                kind: AddRemoveReplica
+                minCount: 1
+                maxCount: 5
+                scaleIncrement: 1
           networkRefs:
             - name: Basta2019MeshNetwork
               endpointRefs:

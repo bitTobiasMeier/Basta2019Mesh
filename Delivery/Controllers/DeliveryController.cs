@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Delivery.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -44,12 +45,23 @@ namespace Delivery.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public void Post([FromBody]Order order)
+        public void Post([FromBody]OrderModel order)
         {
             var msg = DateTime.Now.ToString("dd.MM.yyyy HH:mm:ss") + ": Delivery: " + order.Quantity +" * " + 
                 order.Item +" zu " + order.Price;
             System.Diagnostics.Debug.WriteLine(msg);
-            System.IO.File.AppendAllText(filename, msg + Environment.NewLine);
+
+            var counter = 0;
+            while (counter < 5)
+            try
+            {
+                System.IO.File.AppendAllText(filename, msg + Environment.NewLine);
+                return;
+            }
+            catch (IOException ex)
+            {
+                    Task.Delay(175).Wait();
+            }
                 
             
         }

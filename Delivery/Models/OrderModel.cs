@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace App.Models
-{
-    public class Order
+namespace Delivery.Models
+{ 
+    public class OrderModel
     {
         public string Item { get; set; }
         public decimal Price { get; set; }

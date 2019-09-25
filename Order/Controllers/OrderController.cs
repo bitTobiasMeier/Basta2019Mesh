@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Order.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -45,7 +46,7 @@ namespace OrderController.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public async void Post([FromBody]Order order)
+        public async void Post([FromBody]OrderModel order)
         {
             System.Diagnostics.Debug.WriteLine(order.Quantity + "*" + order.Item + " zu " + order.Price);
             using (var client = new HttpClient())
@@ -74,10 +75,5 @@ namespace OrderController.Controllers
         }
     }
 
-    public class Order
-    {
-        public string Item { get; set; }
-        public decimal Price { get; set; }
-        public int Quantity { get; set; }
-    }
+ 
 }

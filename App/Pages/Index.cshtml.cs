@@ -28,7 +28,7 @@ namespace App.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            var order = new Order() { Item = this.Item, Price = this.Price, Quantity = this.Quantity };
+            var order = new OrderModel() { Item = this.Item, Price = this.Price, Quantity = this.Quantity };
 
             System.Diagnostics.Debug.WriteLine("Bestellung: " + order.Item);
             var svcname = Environment.GetEnvironmentVariable("orderservicename");

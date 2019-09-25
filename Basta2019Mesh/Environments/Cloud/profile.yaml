@@ -1,7 +1,7 @@
 ## Visual Studio SFApp Publish Profile ##
 vsSFAppPublishProfile:
   schemaVersion: 1.0.0-preview2
-  resourceGroupName: Basta2019Mesht-rg
+  resourceGroupName: Basta2019Mesh-rg
   subscription:
     id: 712a277a-2b52-464d-8ad1-4935ef28737f
     name: bit TM Visual Studio Enterprise – MPN
@@ -12,7 +12,7 @@ vsSFAppPublishProfile:
     name: westeurope
     displayName: West Europe
   containerRegistry:
-    serverName: basta2019meshacr.azurecr.io
-    userName: Basta2019Meshacr
-    resourceId: /subscriptions/712a277a-2b52-464d-8ad1-4935ef28737f/resourceGroups/Basta2019Mesht-rg/providers/Microsoft.ContainerRegistry/registries/Basta2019Meshacr
+    serverName: bastademo2019meshacr.azurecr.io
+    userName: BastaDemo2019Meshacr
+    resourceId: /subscriptions/712a277a-2b52-464d-8ad1-4935ef28737f/resourceGroups/Basta2019Mesh-rg/providers/Microsoft.ContainerRegistry/registries/BastaDemo2019Meshacr
     tenant: *o0
